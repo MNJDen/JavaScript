@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <script language="JavaScript" type="text/javascript">
+        function changeToGreen() {
+            document.getElementById("task1").className = "green";
+        }
+
+        function checkAge() {
+            alert(document.form.age.value > 65);
+        }
+
+        function add() {
+            document.getElementById("result").innerHTML = parseInt(document.calculator.num1.value) + parseInt(document.calculator.num2.value);
+        }
+
+        function subtract() {
+            document.getElementById("result").innerHTML = document.calculator.num1.value - document.calculator.num2.value;
+        }
+
+        function multiply() {
+            document.getElementById("result").innerHTML = document.calculator.num1.value * document.calculator.num2.value;
+        }
+
+        function divide() {
+            document.getElementById("result").innerHTML = document.calculator.num1.value / document.calculator.num2.value;
+        }
+
+    </script>
+    <style>
+        .green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="task1">Task 1</h1>
+        <button onclick="changeToGreen()">Green</button>
+    <hr>
+    <h1>Task 2</h1>
+    <form name="form">
+        <input type="number" name="age">
+        <input type="button" value="Check" onclick="checkAge()">
+    </form>
+    <hr>
+    <h1>Task 3</h1>
+    <form name="calculator">
+        <input type="number" name="num1" />
+        <input type="number" name="num2" />
+        <input type="button" value="Add"      onclick="add()" />
+        <input type="button" value="subtract" onclick="subtract()" />
+        <input type="button" value="Multiply" onclick="multiply()" />
+        <input type="button" value="Divide"   onclick="divide()" />
+    </form>
+    <hr>
+
+    <h4>Output</h4>
+    <p id="result"></p>
+</body>
+
+</html>
